@@ -1,10 +1,6 @@
-
-
-
-
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+	<ion-navbar>
+		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
@@ -12,11 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-grid>
+    <ion-row>
+    <ion-col  col-10>
+   <ion-input placeholder="Enter Input" [(ngModel)]="title" name="title" ></ion-input><hr>
+</ion-col>
+    <ion-col align-self-end>
+      <button ion-button secondary  icon-only clear (click)="savedate(title)"><ion-icon   md="md-add-circle" type="button" ></ion-icon></button>
+    </ion-col>
+   
+  </ion-row>
+ </ion-grid>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  
 </ion-content>
